@@ -1,0 +1,113 @@
+body {
+    background-color: black;
+    color: #00f7ff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    caret-color: transparent;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#random-number {
+    font-size: 12em;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 30px #00f7ff;
+    margin-top: 20px;
+    transition: font-size 0.5s;
+}
+
+.RNG {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#numDigits {
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    background-color: transparent;
+    color: #00f7ff;
+    border: 2px solid #00f7ff;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#numDigits:focus {
+    border-color: #1d85a5;
+}
+
+button {
+    padding: 25px 30px;
+    background-color: #000000;
+    color: #03e9f4;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00f7ff;
+    color: #000000;
+    box-shadow: 0 0 5px #00f7ff,
+                0 0 25px #00f7ff,
+                0 0 50px #00f7ff,
+                0 0 200px #00f7ff;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    #random-number {
+        font-size: 4em;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    #random-number {
+        font-size: 8em;
+    }
+}
+
+@media (min-width: 1025px) {
+    #random-number {
+        font-size: 12em;
+    }
+}
+
+/* Additional Styles For Responsive Font Size Adjustment */
+@media only screen and (max-width: 600px) {
+    #random-number {
+        font-size: 4em;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    #random-number {
+        font-size: calc(4em - 0.4em * min(max(0, var(--extra-digits)), 2));
+    }
+}

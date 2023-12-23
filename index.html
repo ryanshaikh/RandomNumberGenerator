@@ -1,0 +1,42 @@
+<!-- RYAN SHAIKH -->
+<!-- CodePen https://codepen.io/ryanshaikh/pen/WNmNaQx -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="RNG">
+    <meta name="application-name" content="RNG">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="RNG">
+            <div id="random-number"></div>
+            <h1 class="display-4">Random Number Generator</h1>
+            <p class="lead">Generate A Random Number With The Specified Number Of Digits.</p>
+            <div class="form-group">
+                <label for="numDigits">Enter Number Of Digits:</label>
+                <input type="number" id="numDigits" min="1" value="1" oninput="updateFontSize()">
+            </div>
+            <button id="generateButton" onclick="generateRandomNumber()">Generate</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
